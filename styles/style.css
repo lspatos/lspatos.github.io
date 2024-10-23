@@ -4,7 +4,8 @@
     margin: 0;
     background-color: #f0f0f0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
 }
 
 ul {
@@ -12,6 +13,22 @@ ul {
     padding: 0;
     list-style: none;
     width: 150px;
+}
+
+title{
+    font-weight: 900;
+}
+
+.subtitulo{
+    font-weight: 400;
+    font-size: 25px;
+}
+
+h2{
+    font-weight: 200;
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 a{  
@@ -36,16 +53,16 @@ ul li a {
 
 .logo .titulo{
     padding: 10px 0px 1px 0px;
-    border-bottom: solid;
+    border-bottom: solid #E96D03;
 }
 
 .container-mapas{
-    padding: 80px 0px 0px 20px;
+    padding: 80px 0px 0px 30px;
 }
 
 .cards-mapas{
     position: relative;
-    padding: 80px 0px 40px 80px;
+    padding: 15px 0px 40px 40px;
     display: flex;
     flex-flow: row nowrap;
     gap: 15px;
@@ -113,7 +130,7 @@ ul li a {
 }
 
 .img-fundo{
-    width: 200px;
+    width: 150px;
 }
 
 footer{

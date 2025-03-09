@@ -16,8 +16,6 @@
         <div class="container-cabecalho">
             <div class="logo">
                 <h1 class="titulo">MAPA 01</h1>
-                
-            </div>
             </div>
         </div>
     </section>
@@ -29,88 +27,68 @@
     </section>
 
     <section class="address">
-        <div class="end_item">
-           <div class="surdo">
-                <h3 class="altura">01</h3>
-           </div>
-           <div class="rua_bairro">
-                <h3 class="rua">R. Antônia Carrilho, 115 </h3>
-                <h4 class="bairro">- Res. Barreiro</h4>
-           </div>
-        </div>
+        <form id="form">
+            <div class="end_item">
+                <div class="surdo">
+                    <h3 class="altura">01</h3>
+                </div>
+                <div class="rua_bairro">
+                    <h3 class="rua">R. Antônia Carrilho, 115 </h3>
+                    <h4 class="bairro">- Res. Barreiro</h4>
+                    <input type="checkbox" id="surdo1" onclick="marcarEndereco(1)">
+                </div>
+            </div>
 
-         <div class="end_item">
-            <div class="surdo">
-                 <h3 class="altura">02</h3>
+            <div class="end_item">
+                <div class="surdo">
+                    <h3 class="altura">02</h3>
+                </div>
+                <div class="rua_bairro">
+                    <h3 class="rua">Av. Dep. Binga, 56 </h3>
+                    <h4 class="bairro">- Nossa Sra. de Fátima</h4>
+                    <input type="checkbox" id="surdo2" onclick="marcarEndereco(2)" disabled>
+                </div>
             </div>
-            <div class="rua_bairro">
-                 <h3 class="rua">Av. Dep. Binga, 56 </h3>
-                 <h4 class="bairro">- Nossa Sra. de Fátima</h4>
-            </div>
-         </div>
 
-         <div class="end_item">
-            <div class="surdo">
-                 <h3 class="altura">03</h3>
+            <div class="end_item">
+                <div class="surdo">
+                    <h3 class="altura">03</h3>
+                </div>
+                <div class="rua_bairro">
+                    <h3 class="rua">R. Lázaro Tadeu Pereira, 84</h3>
+                    <h4 class="bairro">- Alvorada</h4>
+                    <input type="checkbox" id="surdo3" onclick="marcarEndereco(3)" disabled>
+                </div>
             </div>
-            <div class="rua_bairro">
-                 <h3 class="rua">R. Lázaro Tadeu Pereira, 84</h3>
-                 <h4 class="bairro">- Alvorada</h4>
-            </div>
-         </div>
 
-         <div class="end_item">
-            <div class="surdo">
-                 <h3 class="altura">04</h3>
+            <div class="end_item">
+                <div class="surdo">
+                    <h3 class="altura">04</h3>
+                </div>
+                <div class="rua_bairro">
+                    <h3 class="rua">R. Zina Rocha, 748 </h3>
+                    <h4 class="bairro">- Nossa Sra. das Graças</h4>
+                    <input type="checkbox" id="surdo4" onclick="marcarEndereco(4)" disabled>
+                </div>
             </div>
-            <div class="rua_bairro">
-                 <h3 class="rua">R. Zina Rocha, 748 </h3>
-                 <h4 class="bairro">- Nossa Sra. das Gracas</h4>
-            </div>
-         </div>
-
-         <div class="end_item">
-            <div class="surdo">
-                 <h3 class="altura">05</h3>
-            </div>
-            <div class="rua_bairro">
-                 <h3 class="rua">R. Corinto, 108 </h3>
-                 <h4 class="bairro">- Padre Eustaquio</h4>
-            </div>
-         </div>
-
-         <div class="end_item">
-            <div class="surdo">
-                <h3 class="altura">06</h3>
-          </div>
-          <div class="rua_bairro">
-               <h3 class="rua">R. José Miguel de Sousa, 115 </h3>
-               <h4 class="bairro">- Padre Eustaquio</h4>
-          </div>
-         </div>
-        
-         <div class="end_item">
-          <div class="surdo">
-               <h3 class="altura">07</h3>
-          </div>
-          <div class="rua_bairro">
-               <h3 class="rua">R. São Geraldo, 874 </h3>
-               <h4 class="bairro">- Lagoinha</h4>
-          </div>
-       </div>
+        </form>
     </section>
-</a>
-    <form id="enderecos-form">
-    <label>
-        <input type="checkbox" name="endereco" value="1"> Endereço 1: Rua A, Nº 123
-    </label><br>
-    <label>
-        <input type="checkbox" name="endereco" value="2"> Endereço 2: Rua B, Nº 456
-    </label><br>
-    <!-- Adicione mais endereços conforme necessário -->
-    <br>
-    <button type="button" onclick="verificarEnderecos()">Confirmar Visitas</button>
-</form>
 
+    <script>
+        function marcarEndereco(numero) {
+            const checkbox = document.getElementById('surdo' + numero);
+            const proximoCheckbox = document.getElementById('surdo' + (numero + 1));
+
+            if (checkbox.checked) {
+                if (proximoCheckbox) {
+                    proximoCheckbox.disabled = false;
+                }
+            } else {
+                if (proximoCheckbox) {
+                    proximoCheckbox.disabled = true;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
